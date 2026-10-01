@@ -10,12 +10,13 @@ showBtn.addEventListener("click", function() {
   if ( val < 0 || val > 99) {
     message.textContent = "Please Enter Valid Number";
      memeContainer.innerHTML = "";
+     numberInput.value="";
    return;
   }else{
     numberInput.value="";
   }
 
-
+ message.textContent ="";
 
   fetch("https://api.imgflip.com/get_memes")
     .then(res => res.json())
